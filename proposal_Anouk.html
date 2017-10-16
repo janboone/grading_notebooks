@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-10-16 Mon 11:24 -->
+<!-- 2017-10-16 Mon 11:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Using Nbgrader</title>
@@ -234,11 +234,11 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1f4c286">1. create a number of notebooks with nbgrader</a></li>
-<li><a href="#org7dac573">2. create notebooks with answers and automatic grading</a></li>
-<li><a href="#orge463418">3. create the directory infrastructure</a></li>
-<li><a href="#org102a15e">4. automate getting the students' notebooks from github</a></li>
-<li><a href="#org9beb664">5. automate giving students feedback</a></li>
+<li><a href="#orgdf990bb">1. create a number of notebooks with nbgrader</a></li>
+<li><a href="#org62dde29">2. create notebooks with answers and automatic grading</a></li>
+<li><a href="#orgac94f89">3. create the directory infrastructure</a></li>
+<li><a href="#org3e4872a">4. automate getting the students' notebooks from github</a></li>
+<li><a href="#org7fe01e4">5. automate giving students feedback</a></li>
 </ul>
 </div>
 </div>
@@ -258,8 +258,8 @@ To get an idea of nbgrader, watch this video from SciPy 2017:
 To get this working for us, I suggest the following steps.
 </p>
 
-<div id="outline-container-org1f4c286" class="outline-2">
-<h2 id="org1f4c286"><span class="section-number-2">1</span> create a number of notebooks with nbgrader</h2>
+<div id="outline-container-orgdf990bb" class="outline-2">
+<h2 id="orgdf990bb"><span class="section-number-2">1</span> create a number of notebooks with nbgrader</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 This step actually serves two purposes:
@@ -297,8 +297,8 @@ Also add the answer to each of these questions so we can test the export to stud
 </div>
 </div>
 
-<div id="outline-container-org7dac573" class="outline-2">
-<h2 id="org7dac573"><span class="section-number-2">2</span> create notebooks with answers and automatic grading</h2>
+<div id="outline-container-org62dde29" class="outline-2">
+<h2 id="org62dde29"><span class="section-number-2">2</span> create notebooks with answers and automatic grading</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 For this step we can use notebooks for the 1st year Bsc course "Programming for Economists". Note that these notebooks are "confidential"; students need to make these and they will be graded by us. This year we will grade by hand, but in the future we may want to try automatic grading for these. Hence, the notebook should be set up so that automatic grading is possible (for some of the questions).
@@ -306,8 +306,8 @@ For this step we can use notebooks for the 1st year Bsc course "Programming for 
 </div>
 </div>
 
-<div id="outline-container-orge463418" class="outline-2">
-<h2 id="orge463418"><span class="section-number-2">3</span> create the directory infrastructure</h2>
+<div id="outline-container-orgac94f89" class="outline-2">
+<h2 id="orgac94f89"><span class="section-number-2">3</span> create the directory infrastructure</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 nbgrader requires a specific directory structure to grade the students files. What is this directory structure exactly and what are the requirements? E.g. exact naming of the notebook files; should directory name be linked to student name/id etc.
@@ -315,8 +315,8 @@ nbgrader requires a specific directory structure to grade the students files. Wh
 </div>
 </div>
 
-<div id="outline-container-org102a15e" class="outline-2">
-<h2 id="org102a15e"><span class="section-number-2">4</span> automate getting the students' notebooks from github</h2>
+<div id="outline-container-org3e4872a" class="outline-2">
+<h2 id="org3e4872a"><span class="section-number-2">4</span> automate getting the students' notebooks from github</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Once we know the directory structure, we can automate cloning/pulling students' github directories. Idea here is to write a python script that will create the correct directory structure and pull all notebooks file in these directories. We have a google form with students' names on github. We ask students to have a directory "programming_assignments" and then clone/pull the directory "github.com/&lt;student github name&gt;/programming_assignments" for each student.
@@ -328,18 +328,18 @@ Then we run nbgrader to grade all the notebooks we pulled in.
 </div>
 </div>
 
-<div id="outline-container-org9beb664" class="outline-2">
-<h2 id="org9beb664"><span class="section-number-2">5</span> automate giving students feedback</h2>
+<div id="outline-container-org7fe01e4" class="outline-2">
+<h2 id="org7fe01e4"><span class="section-number-2">5</span> automate giving students feedback</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-Suppose we type in students' notebooks some feedback for the students. Then we want students to read this feedback. One way to do this is via "git request-pull", see for instance, <a href="https://www.git-scm.com/docs/git-request-pull">here</a>. Again we need a python script to automate this.
+Suppose we type in students' notebooks some feedback for the students. Then we want students to read this feedback. One way to do this is via "git request-pull", see for instance, <a href="https://www.git-scm.com/docs/git-request-pull">here</a>. Again we need a python script to automate this. 
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jan</p>
-<p class="date">Created: 2017-10-16 Mon 11:24</p>
+<p class="date">Created: 2017-10-16 Mon 11:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
