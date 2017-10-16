@@ -1,0 +1,55 @@
+#+Title: Using Nbgrader
+#+Author: Jan
+
+
+This note describes how I would like to use [[https://github.com/jupyter/nbgrader][nbgrader]] for courses. This requires a number of steps that Anouk can work on. I am not sure how long this will take. My suggestion is to simply start and see how quickly we move through the steps below.
+
+To get an idea of nbgrader, watch this video from SciPy 2017:
+
+[[yt:5WUm0QuJdFw]]
+
+To get this working for us, I suggest the following steps.
+
+* create a number of notebooks with nbgrader
+
+This step actually serves two purposes:
++ makes us familiar with nbgrader;
++ the notebooks for the Bsc course need to be made more interactive so that students can practice in class.
+
+My proposal is to add some questions (as with "Exercise" in the Msc course Applied Economics), that are simple enough that students can make them directly in class to practice python.
+
+Some of the Comp. Policy notebooks already have exercises, but most of them are more like homework exercises as they are not solved within a minute or two in class. So, here, we would like to add simple coding exercises which students can solve by typing one or two lines of code or by copy-paste and making small adjustments.
+
+Notebooks that we can make more interactive:
++ price discrimination: http://janboone.github.io/competition_policy_and_regulation/Article102Part2.html
++ mergers: http://janboone.github.io/competition_policy_and_regulation/Mergers/Mergers.html
++ innovation: http://janboone.github.io/competition_policy_and_regulation/Innovation/Innovation.html
++ health care: http://janboone.github.io/competition_policy_and_regulation/Healthcare/Healthcare.html
+
+Adding three or four such coding exercises per notebook will be fine.
+
+Also add the answer to each of these questions so we can test the export to students (without answers) and the version for teachers (with answers). But these answers do not need to be "gradeable".
+
+* create notebooks with answers and automatic grading
+
+For this step we can use notebooks for the 1st year Bsc course "Programming for Economists". Note that these notebooks are "confidential"; students need to make these and they will be graded by us. This year we will grade by hand, but in the future we may want to try automatic grading for these. Hence, the notebook should be set up so that automatic grading is possible (for some of the questions).
+
+* create the directory infrastructure
+
+nbgrader requires a specific directory structure to grade the students files. What is this directory structure exactly and what are the requirements? E.g. exact naming of the notebook files; should directory name be linked to student name/id etc.
+
+* automate getting the students' notebooks from github
+
+Once we know the directory structure, we can automate cloning/pulling students' github directories. Idea here is to write a python script that will create the correct directory structure and pull all notebooks file in these directories. We have a google form with students' names on github. We ask students to have a directory "programming_assignments" and then clone/pull the directory "github.com/<student github name>/programming_assignments" for each student.
+
+Then we run nbgrader to grade all the notebooks we pulled in.
+
+* automate giving students feedback
+
+Suppose we type in students' notebooks some feedback for the students. Then we want students to read this feedback. One way to do this is via "git request-pull", see for instance, [[https://www.git-scm.com/docs/git-request-pull][here]]. Again we need a python script to automate this.
+
+
+
+
+
+
