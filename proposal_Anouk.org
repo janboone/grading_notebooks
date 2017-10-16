@@ -46,7 +46,7 @@ Then we run nbgrader to grade all the notebooks we pulled in.
 
 * automate giving students feedback
 
-Suppose we type in students' notebooks some feedback for the students. Then we want students to read this feedback. One way to do this is via "git request-pull", see for instance, [[https://www.git-scm.com/docs/git-request-pull][here]]. Again we need a python script to automate this.
+Suppose we type in students' notebooks some feedback for the students. Then we want students to read this feedback. One way to do this is via "git request-pull", see for instance, [[https://www.git-scm.com/docs/git-request-pull][here]]. Again we need a python script to automate this. 
 
 
 
